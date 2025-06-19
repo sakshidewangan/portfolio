@@ -1,14 +1,25 @@
 import React from "react";
+"use client";
 import "./Home.css";
 import Icons from "./icons";
+import { ColourfulText } from "./ui/colourful-text";
+
 const Home = () => {
   return (
     <>
+      {/* original */}
       <div className="home">
         <div className="overlay"></div> {/* Optional background overlay */}
         <div className="text">
           <h1 className="home-title animate delay-1">Hello</h1>
-          <h2 className="name animate delay-2">I'm Sakshi Dewangan</h2>
+          <h2 className="name animate delay-2 text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
+            <div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+              <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
+                I'm
+                <ColourfulText text=" Sakshi Dewangan" />
+              </h1>
+            </div>
+          </h2>
           <p className="animate delay-3">
             "Code, creativity and constant growth, that's my front-end formula."
           </p>

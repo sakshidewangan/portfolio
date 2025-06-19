@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@600&display=swap');
 
 .home {
-        position: relative;
-        z-index: 2;
+    position: relative;
+        z-index: 1000;
         padding: 5rem 0;
         color: white;
         animation: fadeSlideIn 5s ease-in-out forwards;
         opacity: 0;
         transform: translateY(20px);
         text-shadow: 0 0 10px rgba(195, 219, 228, 0.4);
+        min-height: 100vh;
 }
 
 .animate {
@@ -56,24 +57,10 @@
 
 .home-title {
     font-family: 'Poppins', sans-serif;
-        font-size: 3.5rem;
+    font-size: 3.5rem;
         font-weight: 600;
         color: lightblue;
-        }
-        
-       
-
-
-                .name {
-                    font-size: 3rem;
-                    font-weight: 600;
-                    margin: 10px 0;
-                    background: linear-gradient(to right, #f6d365, #fda085);
-                    /* orange-yellow gradient */
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;   }
-        
-  
+    }
 
 .text p {
     font-family: 'Montserrat', sans-serif;
@@ -122,4 +109,3 @@
     height: 100%;
     object-fit: contain;
 }
-
