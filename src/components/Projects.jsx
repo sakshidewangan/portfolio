@@ -46,7 +46,7 @@ const Projects = () => {
               "Images/portfolio2.png",
               "Images/portfolio3.png",
             ]}
-            liveUrl="https://example.com"
+            liveUrl="https://685401a8d86235b15060eff0--sakshidewangan.netlify.app/"
           />
           <ProjectCard
             number="04"
