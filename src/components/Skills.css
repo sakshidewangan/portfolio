@@ -1,0 +1,190 @@
+/* .Skills-section {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+        font-family: 'Montserrat', sans-serif;
+        position: sticky;
+        z-index: 2;
+}
+
+.skill-title {
+        font-size: 4rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        color: #d4d4d4;
+        letter-spacing: 2px;
+}
+
+.slider {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    width: 60%;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+    mix-blend-mode: difference;
+    opacity: 0.8;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+} */
+
+
+.Skills-section {
+    padding: 100px 20px;
+    background-color: #000;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 100px;
+    color: #d4d4d4;
+    letter-spacing: 2px;
+}
+
+/* Container with fixed width, centered */
+.skill-box {
+    overflow: hidden;
+    width: 600px;
+    /* Show 5 icons if each is ~120px wide */
+    margin: auto;
+    position: relative;
+    padding: 100px;
+    padding-bottom: 220px;
+}
+
+.slider {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+.list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+}
+
+/* Hover effect: fade others, highlight hovered */
+.list:hover .item img {
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+
+.list:hover .item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Smooth infinite scroll keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0d0d0d;
+    padding: 15px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(99, 98, 98, 1);
+    width: 220px;
+    margin-top: 10px;
+    z-index: 1000;
+    overflow: visible;
+}
+
+
+
+.tooltip.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.tooltip h4 {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: lightblue;
+}
+
+.tooltip p {
+    background: -webkit-linear-gradient(#f6d365, #fda085);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .skill-box {
+        width: 90%;
+    }
+
+    .item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .list {
+        gap: 20px;
+    }
+}
