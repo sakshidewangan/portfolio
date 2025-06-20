@@ -16,11 +16,6 @@ export default defineConfig({
       plugins: [autoprefixer()],
     },
   },
-  build: {
-    rollupOptions: {
-      external: ["clsx"],
-    },
-  },
   optimizeDeps: {
     include: ["clsx"],
   },
