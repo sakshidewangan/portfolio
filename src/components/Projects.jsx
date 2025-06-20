@@ -6,7 +6,6 @@ const Projects = () => {
   return (
     <>
       <section className="project-section">
-        <hr />
         <h1 className="project-title">PROJECTS</h1>
         <div
           style={{
@@ -77,3 +76,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+

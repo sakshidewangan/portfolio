@@ -9,7 +9,6 @@
         opacity: 0;
         transform: translateY(20px);
         text-shadow: 0 0 10px rgba(195, 219, 228, 0.4);
-        min-height: 100vh;
 }
 
 .animate {
