@@ -21,4 +21,7 @@ export default defineConfig({
       external: ["clsx"],
     },
   },
+  optimizeDeps: {
+    include: ["clsx"],
+  },
 });
